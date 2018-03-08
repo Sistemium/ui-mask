@@ -1,7 +1,7 @@
 /*!
  * angular-ui-mask
  * https://github.com/angular-ui/ui-mask
- * Version: 1.8.7 - 2016-07-26T15:59:07.992Z
+ * Version: 1.8.7 - 2018-03-08T14:03:19.042Z
  * License: MIT
  */
 
@@ -454,7 +454,7 @@ angular.module('ui.mask', [])
                                     if (!isValid || value.length === 0) {
                                         valueMasked = '';
                                         iElement.val('');
-                                        scope.$apply(function() {
+                                        scope.$applyAsync(function() {
                                             //only $setViewValue when not $pristine to avoid changing $pristine state.
                                             if (!controller.$pristine) {
                                                 controller.$setViewValue('');

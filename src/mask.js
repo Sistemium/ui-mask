@@ -444,7 +444,7 @@ angular.module('ui.mask', [])
                                     if (!isValid || value.length === 0) {
                                         valueMasked = '';
                                         iElement.val('');
-                                        scope.$apply(function() {
+                                        scope.$applyAsync(function() {
                                             //only $setViewValue when not $pristine to avoid changing $pristine state.
                                             if (!controller.$pristine) {
                                                 controller.$setViewValue('');
